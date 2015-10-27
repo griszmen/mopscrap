@@ -61,7 +61,7 @@ days = len(timeList)
 totalSecsNew, sec = divmod(totalSecs, 60)
 hr, min = divmod(totalSecsNew, 60)
 print("Welcome %s" % user_name)
-print("Time in company in %i working days: %d:%02d:%02d" % (days, hr, min, sec))
+print("Total time in company - %i working days: %d:%02d:%02d" % (days, hr, min, sec))
 
 shouldBeDay = 8.5*60*60
 timeCalc = (len(timeList)*shouldBeDay) - totalSecs
@@ -70,8 +70,8 @@ if timeCalc <= 0:
     timeCalc = timeCalc*(-1)
     timeCalcNew, timeCalcSec = divmod(timeCalc, 60)
     timeCalcH, timeCalcMin = divmod(timeCalcNew, 60)
-    print("You have: %d:%d:%d overtime. Good stuff!" % (timeCalcH, timeCalcMin, timeCalcSec))
+    print("You have: %d hours %d minutes overtime. Good stuff!" % (timeCalcH, timeCalcMin))
 else:
     timeCalcNew, timeCalcSec = divmod(timeCalc, 60)
     timeCalcH, timeCalcMin = divmod(timeCalcNew, 60)
-    print("You have: %d:%d:%d under the limit. What a pity...:(" % (timeCalcH, timeCalcMin, timeCalcSec))
+    print("You have: %d hours %d minutes under the limit. What a pity...:(" % (timeCalcH, timeCalcMin))
